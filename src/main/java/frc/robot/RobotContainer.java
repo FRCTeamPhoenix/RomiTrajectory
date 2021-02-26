@@ -110,20 +110,19 @@ public class RobotContainer {
         new Pose2d(0.2286*1, 0.2286*3.125, new Rotation2d()),
         config);
     */
-
+ 
     Trajectory exampleTrajectory = TrajectoryGenerator.generateTrajectory(
-        // Start at the origin facing the +X direction
-        List.of(
-            new Pose2d(0, 0, new Rotation2d(0)),
-            new Pose2d(0.2286*1.95, 0.2286, new Rotation2d(Math.PI/2)),
-            new Pose2d(0.2286*1.5, 0.2286*2, new Rotation2d(Math.PI)),
-            new Pose2d(0.2286*-0.4125, 0.2286+0.025, new Rotation2d(Math.PI)),
-            new Pose2d(-0.2286+0.05, 0.2286*2.4, new Rotation2d(Math.PI/2)),
-            new Pose2d(0, 0.2286*3.2, new Rotation2d()),
-            new Pose2d(0.2286*0.85, 0.2286*3.3, new Rotation2d())
-        ),
-        config);
-
+      // Start at the origin facing the +X direction
+      List.of(
+          new Pose2d(0, 0, new Rotation2d(0)),
+          new Pose2d(0.2286*1.95, 0.2286, new Rotation2d(Math.PI/2)),
+          new Pose2d(0.2286*1.5, 0.2286*2, new Rotation2d(Math.PI)),
+          new Pose2d(0.2286*-0.4125, 0.2286+0.035, new Rotation2d(Math.PI)),
+          new Pose2d(-0.2286+0.05, 0.2286*2.4, new Rotation2d(Math.PI/4)),
+          new Pose2d(0.2286*0.80, 0.2286*2.8, new Rotation2d())
+      ),
+      config);
+      
     RamseteCommand ramseteCommand = new RamseteCommand(
         exampleTrajectory,
         m_drivetrain::getPose,
